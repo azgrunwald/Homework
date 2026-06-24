@@ -1,0 +1,51 @@
+header{
+    text-align: center;
+}
+
+h1{
+    color: green;
+}
+
+h2{
+    color: lightgreen;
+}
+
+#general-info{
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+a{
+  text-decoration: none;
+  color: #22382B;
+  font-weight: bold;
+}
+
+a:hover{
+  color: #487A5B;
+  text-decoration: underline;
+}
+
+a:active{
+  color: #A9DFBF;
+}
+
+
+a.active{
+    color: #637c63;
+    border: 2px solid #637c63;
+    font-weight: bold;
+    padding: 2px;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 10px double #2E8B57;
+}
+
+ul {
+    list-style: none;
+}
