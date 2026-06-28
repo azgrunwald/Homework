@@ -1,0 +1,81 @@
+header {
+    text-align: center;
+}
+
+h1 {
+    color: green;
+}
+
+h2 {
+    color: lightgreen;
+}
+
+#general-info {
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+a {
+    text-decoration: none;
+    color: #22382B;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #487A5B;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #A9DFBF;
+}
+
+
+a.active {
+    color: #637c63;
+    border: 2px solid #637c63;
+    font-weight: bold;
+    padding: 2px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.ResraurantVideo {
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+}
+
+.chefImage {
+    float: left;
+    margin-left: 40px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+    scale: 1.2;
+    rotate: -8deg;
+}
+
+.clear-fix {
+    clear: left;
+}
+
+.aboutUsP {
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-shadow: 3px 3px 2px rgb(34, 56, 43);
+}
+
+.title {
+    text-transform: uppercase;
+    transform: skew(-15deg);
+}
+
+.about-page {
+    background-image: url('../images/img1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
