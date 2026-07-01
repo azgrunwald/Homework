@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+header {
+  text-align: center;
+  margin-bottom: 2em;
+  padding: 3em;
+  background-color: #eaefea;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  padding-top: 333px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  color: green;
+}
+
+h2 {
+  color: lightgreen;
+}
+
+#general-info {
+  font-style: italic;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #22382b;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #487a5b;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #a9dfbf;
+}
+
+a.active {
+  color: #637c63;
+  border: 2px solid #637c63;
+  font-weight: bold;
+  padding: 2px;
+}
+
+ul {
+  list-style: none;
+}
+
+.ResraurantVideo {
+  max-width: 100%;
+  width: 700px;
+  height: auto;
+}
