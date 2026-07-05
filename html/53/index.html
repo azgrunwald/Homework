@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/restaurant.css" />
+</head>
+
+<body>
+  <header>
+    <h1>The Urban Cultivator</h1>
+    <!-- <img src="images/logo.png" alt=""> -->
+    <h2>Rooted in the city. Grown for your plate.</h2>
+
+    <nav>
+      <a href="index.html" class="active">Home</a> <a href="ourMenu.html">Our Menu</a> <a href="aboutUs.html">About
+        Us</a>
+    </nav>
+  </header>
+
+  <video class="ResraurantVideo" src="images/Resraurant.mp4" controls loop muted></video>
+
+  <div id="general-info">
+    Welcome to The Urban Cultivator, where the future of dining meets the
+    roots of sustainable agriculture. Located in the heart of the city, our
+    kitchen features an indoor hydroponic micro-farm, allowing us to harvest
+    crisp greens, vibrant herbs, and delicate garnishes just minutes before
+    they reach your plate.
+    <br />
+    We believe in celebrating the incredible flavors, textures, and
+    versatility of earth’s natural ingredients. By partnering closely with
+    local organic growers and utilizing our own vertical farming tech, we
+    craft a premium culinary experience that is as mindful as it is delicious.
+  </div>
+  <table>
+    <caption>
+      Private Catering Packages
+    </caption>
+    <thead>
+      <tr>
+        <th>packag tier</th>
+        <th>inculdes</th>
+        <th>price per guest</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>The Sprout Experience</td>
+        <td>2 Shareables, choice of 1 core green plate, artisanal mocktails</td>
+        <td>$25</td>
+      </tr>
+      <tr>
+        <td>The Cultivator Feast</td>
+        <td>4 Shareables, 2 signature entrees, custom-built dessert flight</td>
+        <td>$45</td>
+      </tr>
+      <tr>
+        <td>The Harvest Gala</td>
+        <td>Full open-flame interactive grill bar, hyper-local micro-green chef pairings</td>
+        <td>$75</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <h3>Store hours</h3>
+    <ul>
+      <li>Sunday: 11:00 AM - 7:00 PM</li>
+      <li>Monday - Thursday: 10:00 AM - 11:00 PM</li>
+      <li>Friday: 10:00 AM - 2:00 PM</li>
+      <li>Closed Saturdays</li>
+    </ul>
+  </div>
+  <form method="post" id="reservation-form">
+    <h3>Request a Table</h3>
+
+    <label>First Name:
+      <input type="text" name="first-name" minlength="2" maxlength="15" required />
+    </label>
+
+    <label for="last-name">Last Name:</label>
+    <input type="text" name="last-name" id="last-name" minlength="2" maxlength="20" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" name="email" id="email" required />
+
+    <label>Date & Time:
+      <input type="datetime-local" name="date-time" required />
+    </label>
+
+    <label for="party">Number of Guests:</label>
+    <input type="number" name="party-size" id="party" min="1" max="12" value="2" />
+
+    <label for="requests">Special Dietary Requests:</label>
+    <textarea name="comments" id="requests" placeholder="Any allergies or special occasions?"></textarea>
+
+    <input type="submit" value="Book My Harvest Table" />
+  </form>
+</body>
+
+</html>

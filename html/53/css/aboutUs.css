@@ -1,0 +1,49 @@
+@import url(restaurant.css);
+
+.chefImage {
+    float: left;
+    margin-left: 40px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+    scale: 1.2;
+    /* rotate: -8deg; */
+}
+
+.clear-fix {
+    clear: left;
+}
+
+.aboutUsP {
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-shadow: 3px 3px 2px rgb(34, 56, 43);
+}
+
+.title {
+    text-transform: uppercase;
+    transform: skew(-15deg);
+}
+
+.about-page {
+    background-image: url('../images/img1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media(width <= 768px){
+.chefImage{
+    float: none;
+    display: block;
+    margin: 7px auto 30px auto;
+}
+}
+
+.title + .aboutUsP {
+  margin-top: 25px;
+}
+
+.aboutUsP::first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #22382B;
+}

@@ -1,0 +1,41 @@
+@import 'restaurant.css';
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: DimGray;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+.menu-item {
+  display: inline-block;
+  width: 300px;
+  background-color: #22382B;
+  color: white;
+  margin: 10px;
+  padding: 2px 8px;
+  text-align: center;
+  border-radius: 15px;
+  vertical-align: top;
+  transition: transform 0.3s ease;
+}
+
+.menu-item img {
+  width: 280px;
+  height: 256px;
+  border-radius: 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 10px double #2E8B57;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px);
+}
