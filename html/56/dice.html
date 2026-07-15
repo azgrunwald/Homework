@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    body{
+      display: grid;
+      
+      gap: 20px;
+
+      grid-template-areas:
+      'one two'
+      'three four'
+      'five six';
+
+      div{
+        border: 3px black solid;
+        width: 250px;
+        height: 250px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        
+        grid-template-areas:
+        'topL  .     topR'
+        'midL  midC  midR'
+        'botL  .     botR';
+      }
+
+      div p{
+        margin: 10px;
+        padding: 10px;
+        font-size: 1.5em;
+      }
+
+      div:nth-child(1){
+        grid-area: one;
+        
+        p:nth-child(1){grid-area: midC;}
+      }
+
+      div:nth-child(2){
+        grid-area: two;
+
+        p:nth-child(1){grid-area: topL;}
+        p:nth-child(2){grid-area: botR;}
+      }
+
+      div:nth-child(3){
+        grid-area: three;
+
+        p:nth-child(1){grid-area: topL;}
+        p:nth-child(2){grid-area: midC;}
+        p:nth-child(3){grid-area: botR;}
+      }
+
+      div:nth-child(4){
+        grid-area: four;
+
+        p:nth-child(1){grid-area: topL;}
+        p:nth-child(2){grid-area: topR;}
+        p:nth-child(3){grid-area: botL;}
+        p:nth-child(4){grid-area: botR;}
+      }
+
+      div:nth-child(5){
+        grid-area: five;
+
+        p:nth-child(1){grid-area: topL;}
+        p:nth-child(2){grid-area: topR;}
+        p:nth-child(3){grid-area: midC;}
+        p:nth-child(4){grid-area: botL;}
+        p:nth-child(5){grid-area: botR;}
+      }
+
+      div:nth-child(6){
+        grid-area: six;
+
+        p:nth-child(1){grid-area: topL;}
+        p:nth-child(2){grid-area: topR;}
+        p:nth-child(3){grid-area: midL;}
+        p:nth-child(4){grid-area: midR;}
+        p:nth-child(5){grid-area: botL;}
+        p:nth-child(6){grid-area: botR;}
+      }
+      
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>1</p>
+    </div>
+    <div>
+      <p>2</p>
+      <p>2</p>
+    </div>
+    <div>
+      <p>3</p>
+      <p>3</p>
+      <p>3</p>
+    </div>
+    <div>
+      <p>4</p>
+      <p>4</p>
+      <p>4</p>
+      <p>4</p>
+    </div>
+    <div>
+      <p>5</p>
+      <p>5</p>
+      <p>5</p>
+      <p>5</p>
+      <p>5</p>
+    </div>
+    <div>
+      <p>6</p>
+      <p>6</p>
+      <p>6</p>
+      <p>6</p>
+      <p>6</p>
+      <p>6</p>
+    </div>
+  </body>
+</html>
