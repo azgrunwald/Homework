@@ -1,0 +1,92 @@
+[
+  {
+    "first": "Donald",
+    "last": "Trump",
+    "email": "donald.trump@example.com",
+    "phone": "202-555-0101"
+  },
+  {
+    "first": "JD",
+    "last": "Vance",
+    "email": "jd.vance@example.com",
+    "phone": "202-555-0102"
+  },
+  {
+    "first": "Marco",
+    "last": "Rubio",
+    "email": "marco.rubio@example.com",
+    "phone": "202-555-0103"
+  },
+  {
+    "first": "Pete",
+    "last": "Hegseth",
+    "email": "pete.hegseth@example.com",
+    "phone": "202-555-0104"
+  },
+  {
+    "first": "Scott",
+    "last": "Bessent",
+    "email": "scott.bessent@example.com",
+    "phone": "202-555-0105"
+  },
+  {
+    "first": "Robert F.",
+    "last": "Kennedy Jr.",
+    "email": "rfk.jr@example.com",
+    "phone": "202-555-0106"
+  },
+  {
+    "first": "Doug",
+    "last": "Burgum",
+    "email": "doug.burgum@example.com",
+    "phone": "202-555-0107"
+  },
+  {
+    "first": "Linda",
+    "last": "McMahon",
+    "email": "linda.mcmahon@example.com",
+    "phone": "202-555-0108"
+  },
+  {
+    "first": "Brooke",
+    "last": "Rollins",
+    "email": "brooke.rollins@example.com",
+    "phone": "202-555-0109"
+  },
+  {
+    "first": "Sean",
+    "last": "Duffy",
+    "email": "sean.duffy@example.com",
+    "phone": "202-555-0110"
+  },
+  {
+    "first": "Howard",
+    "last": "Lutnick",
+    "email": "howard.lutnick@example.com",
+    "phone": "202-555-0111"
+  },
+  {
+    "first": "Kristi",
+    "last": "Noem",
+    "email": "kristi.noem@example.com",
+    "phone": "202-555-0112"
+  },
+  {
+    "first": "Pam",
+    "last": "Bondi",
+    "email": "pam.bondi@example.com",
+    "phone": "202-555-0113"
+  },
+  {
+    "first": "Todd",
+    "last": "Blanche",
+    "email": "todd.blanche@example.com",
+    "phone": "202-555-0114"
+  },
+  {
+    "first": "Katie",
+    "last": "Zacharia",
+    "email": "katie.zacharia@example.com",
+    "phone": "202-555-0115"
+  }
+]
