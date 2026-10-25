@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+ <style>
+  :root {
+    --bg: #f7f7f8;
+    --panel: #ffffff;
+    --border: #e2e2e6;
+    --text: #1d1d1f;
+    --muted: #6b6b73;
+    --accent: #2563eb;
+    --accent-soft: #eff4ff;
+    --radius: 10px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) 1fr;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Sidebar */
+  #sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    padding: 16px;
+    background: var(--panel);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  #sidebar hr {
+    display: none;
+  }
+
+  /* Search */
+  #searchForm {
+    display: flex;
+    gap: 8px;
+  }
+
+  #search {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    font: inherit;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  #search:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  #sidebar button {
+    padding: 10px 16px;
+    font: inherit;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  #searchForm button {
+    background: var(--accent);
+    color: white;
+  }
+
+  #searchForm button:hover {
+    background: #1d4ed8;
+  }
+
+  /* the "clear" button */
+  #sidebar > button {
+    align-self: flex-end;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+
+  #sidebar > button:hover {
+    color: #dc2626;
+    border-color: #dc2626;
+  }
+
+  /* Results list */
+  #places {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #places li {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  #places li:hover {
+    border-color: var(--accent);
+  }
+
+  #places li:has(.active) {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+  }
+
+  #places li span {
+    flex: 1;
+    font-weight: 600;
+  }
+
+  .marker-image,
+  #sidebar img {
+    width: 32px;
+  }
+
+  .summary {
+    max-height: 0;
+    padding: 0 14px;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: var(--muted);
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+  }
+
+  .summary.active {
+    max-height: 12em;
+    padding: 0 14px 12px;
+    overflow-y: auto;
+  }
+
+  /* Info window content */
+  .gm-style-iw h5 {
+    margin: 0 0 6px;
+    font-size: 1rem;
+  }
+
+  .gm-style-iw a {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--accent);
+  }
+
+  /* Stack on narrow screens */
+  @media (max-width: 700px) {
+    body {
+      grid-template-columns: 1fr;
+      grid-template-rows: 45vh 1fr;
+    }
+
+    #sidebar {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+  }
+</style>
+  </head>
+  <body>
+    <div id="sidebar">
+      <form id="searchForm">
+        <input id="search" type="text" required />
+        <button>go</button>
+      </form>
+      <hr />
+      <button id="clear">clear</button>
+
+      <ul id="places"></ul>
+    </div>
+    <div id="map"></div>
+
+    <script>
+      ((g) => {
+        var h,
+          a,
+          k,
+          p = "The Google Maps JavaScript API",
+          c = "google",
+          l = "importLibrary",
+          q = "__ib__",
+          m = document,
+          b = window;
+        b = b[c] || (b[c] = {});
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement("script"));
+              e.set("libraries", [...r] + "");
+              for (k in g)
+                e.set(
+                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                  g[k],
+                );
+              e.set("callback", c + ".maps." + q);
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+              d[q] = f;
+              a.onerror = () => (h = n(Error(p + " could not load.")));
+              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+              m.head.append(a);
+            }));
+        d[l]
+          ? console.warn(p + " only loads once. Ignoring:", g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+      })({
+        key: "",
+        v: "weekly",
+        // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+        // Add other bootstrap parameters as needed, using camel case.
+      });
+    </script>
+
+    <script src="hw.js" type="module"></script>
+  </body>
+</html>
