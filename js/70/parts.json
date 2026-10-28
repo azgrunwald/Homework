@@ -1,0 +1,62 @@
+[
+        {
+        "name": "potato1",
+        "url": "parts/potato1.png"
+    },
+    {
+        "name": "potato2",
+        "url": "parts/potato2.png"
+    },
+    {
+        "name": "eyes1",
+        "url": "parts/eyes1.png"
+    },
+    {
+        "name": "eyes2",
+        "url": "parts/eyes2.png"
+    },
+    {
+        "name": "eyes3",
+        "url": "parts/eyes3.png"
+    },
+    {
+        "name": "eyes4",
+        "url": "parts/eyes4.png"
+    },
+    {
+        "name": "eyes5",
+        "url": "parts/eyes5.png"
+    },
+    {
+        "name": "glassesWithMustache",
+        "url": "parts/glassesWithMustache.png"
+    },
+    {
+        "name": "leftEar",
+        "url": "parts/leftEar.png"
+    },
+    {
+        "name": "mouth1",
+        "url": "parts/mouth1.png"
+    },
+    {
+        "name": "mouth2",
+        "url": "parts/mouth2.png"
+    },
+    {
+        "name": "mouth3",
+        "url": "parts/mouth3.png"
+    },
+    {
+        "name": "nose1",
+        "url": "parts/nose1.png"
+    },
+    {
+        "name": "nose2",
+        "url": "parts/nose2.png"
+    },
+    {
+        "name": "rightEar",
+        "url": "parts/rightEar.png"
+    }
+]
